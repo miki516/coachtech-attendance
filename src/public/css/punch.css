@@ -1,0 +1,98 @@
+/* ページ全体 */
+.clock {
+    min-height: calc(100dvh - 80px);
+    display: grid;
+    place-items: center;
+}
+
+/* 中央ブロック */
+.clock-card {
+    display: grid;
+    justify-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+/* ステータス・バッジ */
+.status-badge {
+    display: inline-flex;
+    padding: 9px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #696969;
+    background: #c8c8c8;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* 日付と時刻 */
+.now-date {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.now-time {
+    font-size: 80px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* ボタン */
+.clock-actions {
+    margin-top: 2.65rem;
+    display: flex;
+    justify-content: center;
+    gap: 82px;
+    flex-wrap: wrap;
+}
+
+.btn-clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 9.5rem;
+    padding: 19px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.15em;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    width: 13.8125rem;
+}
+
+/* 出勤・退勤（黒） */
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+.btn-primary:hover {
+    opacity: 0.92;
+}
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.flash-success {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+/* 休憩用 */
+.btn-break {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 480px) {
+    .btn-clock {
+        min-width: 8.5rem;
+        height: 2.75rem;
+    }
+}

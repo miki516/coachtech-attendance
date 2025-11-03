@@ -1,0 +1,199 @@
+/* ページレイアウト */
+.page-attendance {
+    max-width: 900px;
+    margin: 90px auto 56px;
+    padding: 0 12px;
+}
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0 0 51px;
+    font-weight: 700;
+    font-size: 30px;
+}
+.page-title::before {
+    content: "";
+    width: 8px;
+    height: 40px;
+    background: #000;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* カード */
+.detail-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 行テーブル（見出し＋値） */
+.kv-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    letter-spacing: 0.15em;
+}
+.kv-table th,
+.kv-table td {
+    border-bottom: 2px solid #e1e1e1;
+    padding: 31px 60px;
+    vertical-align: middle;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+}
+.kv-table tr:last-child th,
+.kv-table tr:last-child td {
+    border-bottom: 0;
+}
+.kv-table th {
+    width: 30%;
+    text-align: left;
+    font-weight: 700;
+    color: #777;
+}
+.kv-table td {
+    font-weight: 700;
+}
+
+/* 日付 */
+.date-left,
+.date-right {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* 時刻 */
+.time-input {
+    width: 103px;
+    height: 29px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.15em;
+}
+
+.time-text,
+.break-text {
+    font-variant-numeric: tabular-nums;
+}
+
+.sep {
+    display: inline-block;
+    padding: 0 39px;
+}
+
+/* 時計アイコン非表示 */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* 全体の見た目リセット */
+input[type="time"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* 無効状態の透明化 */
+input[disabled],
+textarea[disabled],
+.detail-card fieldset[disabled] .time-input,
+.detail-card fieldset[disabled] .note-input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    pointer-events: none;
+    font-weight: 700;
+    -webkit-text-fill-color: #000;
+}
+
+/* テキストエリア */
+.note-input {
+    width: 100%;
+    max-width: 316px;
+    min-height: 72px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 8px 10px;
+}
+
+/* 下部の右寄せボタン */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 36px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+    padding: 11px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.06s ease;
+}
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+.btn-primary:hover {
+    opacity: 0.92;
+}
+.btn-primary:active {
+    transform: translateY(1px);
+}
+.btn-muted {
+    background: #696969;
+    color: #fff;
+    cursor: default;
+}
+
+/* 注意文（一般ユーザー：ロック時） */
+.note-danger {
+    margin-top: 25px;
+    color: rgb(255 0 0 / 50%);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+    letter-spacing: 0.15em;
+}
+
+/* fieldset の枠や余白非表示 */
+.detail-card fieldset[disabled] {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+/* 読み取り専用モードの値表示 */
+.read .kv-table td {
+    text-align: left;
+}
+.value-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 70px;
+}
+
+/* 小さめ表示向け */
+@media (max-width: 640px) {
+    .kv-table th {
+        width: 28%;
+    }
+}

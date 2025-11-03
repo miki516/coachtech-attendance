@@ -1,0 +1,135 @@
+body {
+    background-color: #fff;
+}
+
+.login-page,
+.register-page {
+    margin: 96px;
+}
+
+/* 見出し */
+.page-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0;
+}
+
+/* フォーム */
+.form-content {
+    max-width: 680px;
+    margin: 54px auto 60px;
+}
+
+.form-body {
+    margin-bottom: 80px;
+}
+
+.form-group {
+    margin-bottom: 38px;
+}
+
+.form-group-title {
+    margin-bottom: 3px;
+}
+
+.form-label-item {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* テキスト入力 */
+.field-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.field-control:focus {
+    outline: none;
+    border-color: #6b7280;
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.15);
+}
+
+/* ボタン */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-solid {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+    height: 60px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 26px;
+}
+
+/* メール認証誘導画面 */
+.site-main-center {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    place-items: center;
+}
+
+.verify-card {
+    display: grid;
+    gap: 24px;
+    text-align: center;
+}
+
+.verify-card-lead {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 画面下部リンク */
+.btn-verify {
+    margin-inline: auto;
+    margin-bottom: 25px;
+    background: #d9d9d9;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px 32px;
+    font-size: 24px;
+}
+
+.form-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-footer-link {
+    color: #0073cc;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+/* タブレット*/
+@media (max-width: 1024px) {
+    .login-page,
+    .register-page,
+    .profile-settings {
+        margin: 48px auto;
+        max-width: 90%;
+    }
+}

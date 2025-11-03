@@ -1,0 +1,192 @@
+/* ページラップ */
+.page-attendance {
+    max-width: 900px;
+    margin: 90px auto 80px;
+    padding: 0 12px;
+}
+
+/* タイトル（左に黒バー） */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0 0 47px;
+    font-weight: 700;
+    font-size: 30px;
+}
+.page-title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 40px;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ツールバー（前月/年月/翌月） */
+.sheet-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 46px;
+}
+
+.toolbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #737373;
+    letter-spacing: 0.15em;
+}
+
+.icon-img {
+    width: 20px;
+    height: 15px;
+}
+
+/* 両端を広げる */
+.sheet-toolbar-left,
+.sheet-toolbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sheet-toolbar-left {
+    justify-content: flex-start;
+}
+.sheet-toolbar-right {
+    justify-content: flex-end;
+}
+
+/* ツールバーのリンク共通 */
+.sheet-toolbar a {
+    text-decoration: none;
+    color: #737373;
+}
+
+/* 中央 */
+.sheet-toolbar-center {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.icon-calendar {
+    width: 25px;
+    height: 25px;
+}
+
+/* テーブルカード */
+.sheet {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* テーブル本体 */
+.att-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    font-size: 16px;
+    font-weight: 700;
+    color: #737373;
+    letter-spacing: 0.15em;
+}
+
+.att-table thead th {
+    font-weight: 700;
+    padding: 12px 8px;
+    border-bottom: 3px solid #e1e1e1;
+}
+.att-table tbody td {
+    padding: 11px 8px;
+    border-bottom: 2px solid #e1e1e1;
+    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+}
+
+.att-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 先頭列だけ左余白 */
+.att-table thead th:first-child,
+.att-table tbody td:first-child {
+    padding-left: 30px;
+}
+
+/* 右端「詳細」 */
+.cell-action a {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+}
+
+/* CSVボタン */
+.csv-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-csv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0 0;
+    min-width: 112px;
+    padding: 11px 40px;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+}
+.btn-csv:hover {
+    opacity: 0.92;
+}
+
+/* 管理者一覧の微調整 */
+.is-admin .att-table .col-name {
+    width: 28%;
+    text-align: left;
+}
+.is-admin .att-table .col-action {
+    width: 12%;
+}
+.is-admin .att-table .cell-left {
+    text-align: left;
+}
+
+/* レスポンシブ */
+@media (max-width: 640px) {
+    .att-table {
+        font-size: 13px;
+    }
+    .sheet-toolbar {
+        border-radius: 10px 10px 0 0;
+    }
+    .sheet {
+        border-radius: 0 0 10px 10px;
+    }
+}

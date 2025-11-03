@@ -1,0 +1,97 @@
+/* ===== Page ===== */
+.page-staff {
+    max-width: 944px;
+    margin: 90px auto 56px;
+    padding: 0 12px;
+}
+
+/* タイトル */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0 0 43px;
+    font-weight: 700;
+    font-size: 30px;
+}
+.page-title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 40px;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ===== Card + Table ===== */
+.sheet {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+    font-size: 16px;
+    font-weight: 700;
+    color: #737373;
+}
+
+.staff-table thead th {
+    padding: 12px 8px;
+    border-bottom: 3px solid #e1e1e1;
+    letter-spacing: 0.15em;
+}
+
+.staff-table tbody td {
+    padding: 13px 8px;
+    border-bottom: 2px solid #e1e1e1;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.staff-table thead th:first-child,
+.staff-table tbody td:first-child {
+    padding-left: 30px;
+}
+
+.staff-table thead th:last-child,
+.staff-table tbody td:last-child {
+    text-align: right;
+    padding-right: 30px;
+    letter-spacing: 0.15em;
+}
+
+.staff-table tbody td[colspan] {
+    text-align: center;
+}
+
+.staff-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 詳細リンク */
+.cell-action a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+.cell-action a:hover {
+    opacity: 0.9;
+}
+
+/* メール */
+.is-email {
+    overflow-wrap: anywhere;
+}
+
+/* レスポンシブ */
+@media (max-width: 640px) {
+    .staff-table {
+        font-size: 14px;
+    }
+}

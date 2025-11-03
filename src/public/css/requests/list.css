@@ -1,0 +1,149 @@
+/* ===== Page ===== */
+.page-requests {
+    max-width: 944px;
+    margin: 90px auto 56px;
+    padding: 0 12px;
+}
+
+/* タイトル */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 0 0 43px;
+    font-weight: 700;
+    font-size: 30px;
+}
+.page-title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 40px;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ===== Tabs（上部の承認待ち/承認済み） ===== */
+.tabs {
+    display: flex;
+    gap: 106px;
+    align-items: center;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #000000;
+    padding: 17px 57px;
+}
+
+.tab {
+    appearance: none;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tab[aria-selected="true"] {
+    font-weight: 700;
+}
+
+/* ===== Card + Table ===== */
+.sheet {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.req-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+    font-size: 16px;
+    font-weight: 700;
+    color: #737373;
+}
+
+.req-table thead th {
+    padding: 12px 8px;
+    border-bottom: 3px solid #e1e1e1;
+    letter-spacing: 0.15em;
+}
+
+.req-table tbody td {
+    padding: 13px 8px;
+    border-bottom: 2px solid #e1e1e1;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.req-table thead th:first-child,
+.req-table tbody td:first-child {
+    padding-left: 30px;
+}
+
+.req-table thead th:last-child,
+.req-table tbody td:last-child {
+    text-align: right;
+    padding-right: 30px;
+    letter-spacing: 0.15em;
+}
+
+.req-table th:nth-child(4),
+.req-table td:nth-child(4) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.req-table tbody td[colspan] {
+    text-align: center;
+}
+
+.req-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 詳細リンク */
+.cell-action a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+.cell-action a:hover {
+    opacity: 0.9;
+}
+
+/* ステータス・バッジ */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+.status-badge--pending {
+    background: #eee;
+    color: #444;
+}
+.status-badge--approved {
+    background: #dff3df;
+    color: #247c24;
+}
+
+/* 日付の見栄えを揃える */
+.req-table .is-date {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+}
+
+/* レスポンシブ */
+@media (max-width: 640px) {
+    .req-table {
+        font-size: 14px;
+    }
+}
